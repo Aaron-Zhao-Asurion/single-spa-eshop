@@ -1,5 +1,6 @@
 {
   "name": "@sspaeshop/user-basket",
+  "version": "1.0.0",
   "scripts": {
     "start": "webpack serve --port 8080",
     "start:standalone": "webpack serve --env standalone",

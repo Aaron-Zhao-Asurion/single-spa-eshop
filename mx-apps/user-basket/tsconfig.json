@@ -1,7 +1,10 @@
 {
   "extends": "ts-config-single-spa",
   "compilerOptions": {
-    "jsx": "react"
+    "jsx": "react",
+    "module": "es6",
+    "target": "es5",
+    "baseUrl": "./mx-apps/user-basket"
   },
   "include": ["src/**/*", "node_modules/@types"],
   "exclude": ["src/**/*.test*"]

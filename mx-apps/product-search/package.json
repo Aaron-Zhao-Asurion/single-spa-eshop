@@ -1,5 +1,6 @@
 {
   "name": "@sspaeshop/product-search",
+  "version": "1.0.0",
   "scripts": {
     "start": "webpack serve --port 8081",
     "start:standalone": "webpack serve --env standalone",

@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "sspaeshop";
@@ -24,5 +25,8 @@ module.exports = (webpackConfigEnv, argv) => {
         },
       }),
     ],
+    output: {
+      path: path.resolve(__dirname, "../dist/root-config")
+    }
   });
 };
