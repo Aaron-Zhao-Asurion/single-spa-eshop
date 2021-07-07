@@ -13,6 +13,9 @@
   -->
   <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
 
+
+  <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+  
   <!--
     This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
     Learn more about CSP policies at https://content-security-policy.com/#directive
@@ -36,7 +39,9 @@
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
-        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js"
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js",
+        "rxjs": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/es2015/rxjs.min.js",
+        "rxjs/operators": "https://cdn.jsdelivr.net/npm/@esm-bundle/rxjs/system/es2015/rxjs-operators.min.js"
       }
     }
   </script>
@@ -51,7 +56,8 @@
       "imports": {
         "@sspaeshop/root-config": "//localhost:9000/sspaeshop-root-config.js",
         "@sspaeshop/user-basket": "//localhost:8080/sspaeshop-user-basket.js",
-        "@sspaeshop/product-search": "//localhost:8081/sspaeshop-product-search.js"
+        "@sspaeshop/product-search": "//localhost:8081/sspaeshop-product-search.js",
+        "@sspaeshop/shopping-service": "//localhost:8082/sspaeshop-shopping-service.js"
       }
     }
   </script>

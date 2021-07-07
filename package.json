@@ -7,10 +7,11 @@
   "license": "unlicensed",
   "private": true,
   "scripts": {
-    "start": "run-p app-root-start user-basket-start product-search-start",
+    "start": "run-p app-root-start user-basket-start product-search-start shopping-service-start",
     "app-root-start": "cd root-config && yarn start",
     "user-basket-start": "cd mx-apps/user-basket && yarn start",
     "product-search-start": "cd mx-apps/product-search && yarn start",
+    "shopping-service-start": "cd mx-apps/shopping-service && yarn start",
     "test": "yarn workspaces run test",
     "build": "yarn workspaces run build"
   },

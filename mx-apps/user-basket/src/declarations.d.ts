@@ -1,3 +1,5 @@
+import { BehaviorSubject } from "rxjs";
+
 declare module "*.html" {
   const rawHtmlFile: string;
   export = rawHtmlFile;
@@ -36,4 +38,9 @@ declare module "*.webp" {
 declare module "*.svg" {
   const src: string;
   export default src;
+}
+
+declare module "@sspaeshop/shopping-service" {
+  const cart$: BehaviorSubject<any>;
+  export = cart$;
 }
