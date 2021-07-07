@@ -1,0 +1,14 @@
+{
+  "name": "single-spa-eshop-e2e",
+  "version": "1.0.0",
+  "author": "Aaron Zhao <aaron.zhao@asurion.com>",
+  "license": "unlicensed",
+  "private": true,
+  "scripts": {
+    "start": "yarn run cy:open",
+    "cy:open": "yarn run cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^7.6.0"
+  }
+}

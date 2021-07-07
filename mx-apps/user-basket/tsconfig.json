@@ -3,8 +3,7 @@
   "compilerOptions": {
     "jsx": "react",
     "module": "es6",
-    "target": "es5",
-    "baseUrl": "./mx-apps/user-basket"
+    "target": "es5"
   },
   "include": ["src/**/*", "node_modules/@types"],
   "exclude": ["src/**/*.test*"]
