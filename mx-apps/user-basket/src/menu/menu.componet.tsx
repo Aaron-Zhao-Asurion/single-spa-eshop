@@ -1,41 +1,9 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import Menu, { MenuProps } from '@material-ui/core/Menu';
+import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { UserBasketMenuItems } from './menu.items';
-
-const StyledMenu = withStyles({
-  paper: {
-    border: '1px solid #d3d4d5',
-  },
-})((props: MenuProps) => (
-  <Menu
-    elevation={0}
-    getContentAnchorEl={null}
-    anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'center',
-    }}
-    transformOrigin={{
-      vertical: 'top',
-      horizontal: 'center',
-    }}
-    {...props}
-  />
-));
-
-const StyledMenuItem = withStyles((theme) => ({
-  root: {
-    '&:focus': {
-      backgroundColor: theme.palette.primary.main,
-      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
-        color: theme.palette.common.white,
-      },
-    },
-  },
-}))(MenuItem);
 
 export default function CustomizedMenus() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -51,7 +19,7 @@ export default function CustomizedMenus() {
   return (
     <div>
       <Button
-        aria-controls="customized-menu"
+        aria-controls="simple-menu"
         aria-haspopup="true"
         variant="contained"
         color="primary"
@@ -59,19 +27,19 @@ export default function CustomizedMenus() {
       >
         Open Menu
       </Button>
-      <StyledMenu
-        id="customized-menu"
+      <Menu
+        id="simple-menu"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        { UserBasketMenuItems.map(item => (
-          <StyledMenuItem>
+        { UserBasketMenuItems.map((item, i) => (
+          <MenuItem key={'item' + i}>
             <ListItemText primary={item.name} />
-          </StyledMenuItem>
+          </MenuItem>
         )) }
-      </StyledMenu>
+      </Menu>
     </div>
   );
 }
