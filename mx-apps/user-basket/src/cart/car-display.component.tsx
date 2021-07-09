@@ -18,7 +18,7 @@ export default function CartDisplay() {
 
   return (
     <div data-testid="cart-display">
-      { count }
+      <span id="cart-item-count">{ count }</span>
       <ShoppingCartIcon fontSize="large"></ShoppingCartIcon>
     </div>
   );

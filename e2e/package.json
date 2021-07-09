@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "start": "yarn run cy:open",
-    "cy:open": "yarn run cypress open"
+    "headless": "cypress run --headless --browser chrome",
+    "cy:open": "cypress open"
   },
   "devDependencies": {
     "cypress": "^7.6.0"
