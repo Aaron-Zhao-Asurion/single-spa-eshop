@@ -7,4 +7,14 @@ describe("Root component", () => {
     const { getByText } = render(<Root name="Testapp" />);
     expect(getByText(/Testapp is mounted!/i)).toBeInTheDocument();
   });
+
+  it("should have returns and orders button", () => {
+    const { getByText } = render(<Root name="Testapp" />);
+    expect(getByText(/Returns & Orders/)).toBeInTheDocument();
+  });
+
+  it("should have cart", () => {
+    const { getByTestId } = render(<Root name="Testapp" />);
+    expect(getByTestId("cart-display")).toBeInTheDocument();
+  });
 });

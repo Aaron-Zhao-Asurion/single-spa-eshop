@@ -3,9 +3,8 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { UserBasketMenuItems } from './menu.items';
 
-export default function CustomizedMenus() {
+export default function CustomizedMenus(props) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -34,9 +33,9 @@ export default function CustomizedMenus() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        { UserBasketMenuItems.map((item, i) => (
+        { props.menu.map((item, i) => (
           <MenuItem key={'item' + i}>
-            <ListItemText primary={item.name} />
+            <ListItemText data-testid="basket-menu-item" primary={item.name} />
           </MenuItem>
         )) }
       </Menu>

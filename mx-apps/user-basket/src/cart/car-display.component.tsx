@@ -17,7 +17,7 @@ export default function CartDisplay() {
   });
 
   return (
-    <div>
+    <div data-testid="cart-display">
       { count }
       <ShoppingCartIcon fontSize="large"></ShoppingCartIcon>
     </div>
