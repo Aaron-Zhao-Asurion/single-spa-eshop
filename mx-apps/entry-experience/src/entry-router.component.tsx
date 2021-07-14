@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { fetchUserSurveys, userSurveys$ } from "@sspaeshop/entry-service";
+import { userSurveys } from "@sspaeshop/entry-service";
 import { useHistory } from "react-router-dom";
 
 export default function EntryRouter() {
   const history = useHistory();
 
-  fetchUserSurveys(1).then(surveys=> {
-    if (surveys != null && surveys.length > 0) {
-      userSurveys$.next(surveys);
-      history.push('/survey');
-    } else {
-      history.push('/products');
-    }
-  });
+  useEffect(() => {
+    userSurveys.then(surveys => {
+      if (surveys != null && surveys.length > 0) {
+        history.push('/survey');
+      } else {
+        history.push('/products');
+      }
+    });
+  }, []);
 
   return (
     <div>

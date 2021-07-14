@@ -1,6 +1,5 @@
-import React, { useState }  from "react";
-import { userSurveys$ } from "@sspaeshop/entry-service";
-import { useEffect } from "react";
+import React, { useState, useEffect }  from "react";
+import { userSurveys } from "@sspaeshop/entry-service";
 import Button from "@material-ui/core/Button";
 
 export default function Root(props) {
@@ -11,18 +10,14 @@ export default function Root(props) {
   };
 
   useEffect(() => {
-    const surveyUpdate = userSurveys$.subscribe(surveys => {
+    userSurveys.then(surveys => {
       if (surveys != null && surveys.length > 0) {
         setSurvey(surveys[0]);
       } else {
         surveyDone();
       }
     });
-
-    return function cleanup() {
-      surveyUpdate.unsubscribe();
-    }
-  });
+  }, []);
 
   const title = props.name?.split('/')[1]?.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
   return (

@@ -32,5 +32,6 @@ export async function fetchUserSurveys(fakeUserId: string | number): Promise<Use
   }
 }
 
-export const userSurveys$ = new BehaviorSubject<UserSurvey[]>([]);
+const userID = 1;
+export const userSurveys = fetchUserSurveys(userID).then(r => r);
 

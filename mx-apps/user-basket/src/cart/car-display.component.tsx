@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { cart$ } from "@sspaeshop/shopping-service";
-import { useEffect } from "react";
 
 export default function CartDisplay() {
   const [count, setCount] = useState(0);
@@ -14,7 +13,7 @@ export default function CartDisplay() {
     return function cleanup() {
       cartUpdate.unsubscribe();
     }
-  });
+  }, []);
 
   return (
     <div data-testid="cart-display">
