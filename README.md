@@ -9,3 +9,10 @@ This monorepo uses yarn workspaces to manage the project scope, run the followin
 $ yarn install
 # start all micro front-ends
 $ yarn start
+```
+
+## Topics
+* [Single SPA Layout](#single-spa-layout)
+* [Routing](#routing)
+* [Cross Micro App Communication](#cross-micro-app-communication)
+* [Redirects](#redirects)
