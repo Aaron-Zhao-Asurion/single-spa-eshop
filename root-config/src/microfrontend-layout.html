@@ -19,8 +19,14 @@
 
   <main>
     <route default>
+      <application name="@sspaeshop/entry-experience"></application>
+    </route>
+    <route path="products">
       <application name="@sspaeshop/user-basket"></application>
       <application name="@sspaeshop/product-search"></application>
+    </route>
+    <route path="survey">
+      <application name="@sspaeshop/user-survey"></application>
     </route>
   </main>
 </single-spa-router>

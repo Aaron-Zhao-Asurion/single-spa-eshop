@@ -7,11 +7,14 @@
   "license": "unlicensed",
   "private": true,
   "scripts": {
-    "start": "run-p app-root-start user-basket-start product-search-start shopping-service-start",
+    "start": "run-p app-root-start user-basket-start product-search-start shopping-service-start entry-service-start entry-experience-start user-survey-start",
     "app-root-start": "cd root-config && yarn start",
     "user-basket-start": "cd mx-apps/user-basket && yarn start",
     "product-search-start": "cd mx-apps/product-search && yarn start",
     "shopping-service-start": "cd mx-apps/shopping-service && yarn start",
+    "entry-service-start": "cd mx-apps/entry-service && yarn start",
+    "entry-experience-start": "cd mx-apps/entry-experience && yarn start",
+    "user-survey-start": "cd mx-apps/user-survey && yarn start",
     "test": "yarn workspaces run test",
     "build": "yarn workspaces run build"
   },

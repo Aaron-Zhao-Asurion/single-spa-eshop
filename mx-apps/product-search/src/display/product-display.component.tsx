@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import { cart$ } from "@sspaeshop/shopping-service";
 
 export default function ProductDisplay(props) {
-  const addToBasket = function () {
+  const addToBasket = () => {
     cart$.next({
       numberOfItems: cart$.value.numberOfItems + 1
     });
@@ -17,7 +17,7 @@ export default function ProductDisplay(props) {
           <Box data-testid="product-box" key={'item' + i} p={1} mr={2} style={{backgroundColor: 'rgb(224, 224, 224)'}}>
             <p>{ item.name }</p>
             <Button variant="contained" size="small" color="primary"
-              onClick={() => addToBasket()}>
+              onClick={addToBasket}>
               Add to cart
             </Button>
           </Box>
