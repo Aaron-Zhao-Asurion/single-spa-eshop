@@ -72,5 +72,9 @@ dist
 .DS_Store
 
 #
+*/cypress/screenshots
 */cypress/videos
+*/cypress/logs
+*/cypress/fixtures/profile.json
+*/cypress/fixtures/users.json
 /secret
