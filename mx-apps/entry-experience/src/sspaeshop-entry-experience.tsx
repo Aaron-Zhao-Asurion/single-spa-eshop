@@ -14,3 +14,12 @@ const lifecycles = singleSpaReact({
 });
 
 export const { bootstrap, mount, unmount } = lifecycles;
+
+const alpha = {
+  value: 2
+};
+
+const updateAlpha = (_alpha) => {
+  alpha.value = _alpha;
+};
+export { alpha, updateAlpha }
