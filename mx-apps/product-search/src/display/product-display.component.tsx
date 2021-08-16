@@ -40,7 +40,7 @@ export default function ProductDisplay(props) {
         { props.products.map((item, i) => (
           <Box data-testid="product-box" key={'item' + i} p={1} mr={2} style={{backgroundColor: 'rgb(224, 224, 224)'}}>
             <p>{ item.name }</p>
-            <Button variant="contained" size="small" color="primary"
+            <Button data-testid="add-product-btn" variant="contained" size="small" color="primary"
               onClick={addToBasket}>
               Add to cart
             </Button>

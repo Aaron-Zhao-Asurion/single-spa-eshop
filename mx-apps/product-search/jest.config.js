@@ -5,7 +5,8 @@ module.exports = {
   },
   moduleNameMapper: {
     "\\.(css)$": "identity-obj-proxy",
-    "@sspaeshop/shopping-service": "<rootDir>/__mocks__/shopping-service.mock.js"
+    "@sspaeshop/shopping-service": "<rootDir>/__mocks__/shopping-service.mock.js",
+    "@sspaeshop/entry-experience": "<rootDir>/__mocks__/entry-experience.mock.js"
   },
   setupFilesAfterEnv: ["@testing-library/jest-dom"],
 };

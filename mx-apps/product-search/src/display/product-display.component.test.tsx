@@ -12,8 +12,8 @@ describe("Product Display component", () => {
   });
 
   it("should have add to cart button for each item", async () => {
-    const { findAllByRole } = render(<ProductDisplay products={ProductFruitItems} />);
-    const addBtns = await findAllByRole("button");
+    const { findAllByTestId } = render(<ProductDisplay products={ProductFruitItems} />);
+    const addBtns = await findAllByTestId("add-product-btn");
     expect(addBtns.length).toBe(ProductFruitItems.length);
     expect(addBtns.map(btn => btn.textContent)).toEqual(new Array(ProductFruitItems.length).fill("Add to cart"));
   });
