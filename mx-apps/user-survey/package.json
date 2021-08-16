@@ -1,6 +1,7 @@
 {
   "name": "@sspaeshop/user-survey",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "webpack serve --port 8085",
     "start:standalone": "webpack serve --env standalone",

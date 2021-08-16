@@ -1,6 +1,7 @@
 {
   "name": "@sspaeshop/entry-experience",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "webpack serve --port 8084",
     "start:standalone": "webpack serve --env standalone",

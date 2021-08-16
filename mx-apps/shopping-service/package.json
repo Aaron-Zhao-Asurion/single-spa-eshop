@@ -1,6 +1,7 @@
 {
   "name": "@sspaeshop/shopping-service",
   "version": "1.0.0",
+  "license": "UNLICENSED",
   "scripts": {
     "start": "webpack serve --port 8082",
     "start:standalone": "webpack serve --env standalone",
