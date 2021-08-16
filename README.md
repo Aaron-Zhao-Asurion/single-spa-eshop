@@ -11,6 +11,8 @@ $ yarn install
 $ yarn start
 ```
 
+http://localhost:9000
+
 ## Topics
 * [Single SPA Layout](#single-spa-layout)
 * [Routing](#routing)
