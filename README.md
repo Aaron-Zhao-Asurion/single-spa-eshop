@@ -12,9 +12,3 @@ $ yarn start
 ```
 
 http://localhost:9000
-
-## Topics
-* [Single SPA Layout](#single-spa-layout)
-* [Routing](#routing)
-* [Cross Micro App Communication](#cross-micro-app-communication)
-* [Redirects](#redirects)
