@@ -1,0 +1,15 @@
+name: Feature tests
+on:
+  push:
+    branches: [feature/*]
+jobs:
+  unit-test:
+      if: "!(github.event.action == 'closed' || github.event.pull_request.merged == true)"
+      name: unit tests
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Install modules
+          run: yarn
+        - name: run unit tests
+          run: yarn test
